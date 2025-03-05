@@ -1,0 +1,43 @@
+REACT AVANZADO
+
+Instalaciones desde PowerShell como administrador
+
+	Chocolatey =>https://chocolatey.org/install (individual)
+	Nodejs => choco install nodejs.install
+	Nextjs => npx create-next-app crmcliente
+
+Instalaciones desde cmd para la carpeta
+	
+	npm init
+
+Instalaciones desde la terminal de visual
+
+	npm i apollo-server
+	npm i -D nodemon
+	npm run (luego de hacer unas modificaciones sobre los scripts de package.json y crear index.js)
+
+Consultas en apollo
+
+	//Los query se utilizan para hacer consultas en la db
+	query (nombre de la query)($variable: tipo_variable!){
+		nombre de la query(variable: $variable){
+			campos que quiero que me retorne
+		}
+	}
+
+	//Los mutation se utilizan para crear registros, para eliminarlos o actualizarlos
+	mutation (nombre de la mutation)($variable: tipo_variable!){
+		nombre de la mutation(variable: $variable){
+			campos que quiero que me retorne
+		}
+	}
+
+	//Variables tanto en query como mutation (acá los campos son todos los de la query o mutation)
+	{
+		"variable": {
+			"campos": "ejemplo" 
+		}
+	}
+
+	//HTTP Headers
+	Authorization: "token"
